@@ -2,3 +2,7 @@ graylog:
     host: 000.000.000.000
     use: false
 local_ip: 000.000.000.000
+discord:
+    use: false
+    webhook_urls:
+        - https://discord.com/api/webhooks/000000000000000000/
