@@ -11,6 +11,7 @@ from waitress import serve
 from flask_definitions import *
 import endpoints.general
 import endpoints.logging
+import endpoints.launcher
 
 
 # ------------------------------------------------------- #

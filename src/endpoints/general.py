@@ -187,7 +187,20 @@ def healthcheck():
     try:
         return jsonify({"Health": "Alive"})
     except TimeoutError:
-        return jsonify({"status": "error"})
+        return jsonify({"Health": "error"})
     except Exception as e:
         logger.graylog_logger(level="error", handler="general-healthcheck", message=e)
+        return jsonify({"Health": "error"})
+
+
+@app.route("/api/v1/version", methods=["GET"])
+def version():
+    check_user_agent("soft")
+    try:
+        return jsonify({"version": version, "name": name})
+    except TimeoutError:
+        return jsonify({"status": "error"})
+    except Exception as e:
+        logger.graylog_logger(level="error", handler="general-version", message=e)
+        return jsonify({"status": "error"})
 
