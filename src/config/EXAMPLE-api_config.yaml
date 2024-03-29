@@ -1,0 +1,4 @@
+graylog:
+    host: 000.000.000.000
+    use: false
+local_ip: 000.000.000.000
