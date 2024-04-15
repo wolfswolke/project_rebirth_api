@@ -5,7 +5,7 @@ from logic.global_handlers import session_manager
 from logic.global_handlers import check_user_agent
 from logic.global_handlers import sanitize_input
 from logic.hash_handler import hash_handler
-from logic.webhook_handler import sender as discord_sender
+from logic.webhook_handler import sender
 import json
 import os
 

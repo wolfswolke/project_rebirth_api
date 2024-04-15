@@ -23,6 +23,11 @@ def bug_report():
         # "Email": "STRING", "Attachments": "FILE", "Logs": "FILE", "Anonymous": "BOOL"}
         data = request.json
         logger.graylog_logger(level="info", handler="bug_report", message=data)
+        sender(discord_urls,
+               "Bug Report",
+               f"Reporter: {data['Reporter']}\nDescription: "
+               f"{data['Description']}\nSteps: {data['Steps']}\nExpected: "
+               f"{data['Expected']}\nDiscord: {data['Discord']}\nEmail: {data['Email']}")
         return jsonify({"status": "success"})
     except TimeoutError:
         return jsonify({"status": "error"})
