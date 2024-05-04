@@ -1,9 +1,9 @@
 FROM python:3.13.0a5-alpine3.18
 LABEL authors="zkwolf (PROJECT REBIRTH)"
 
-RUN apk upgrade && apk add curl
+RUN apk add curl && apk upgrade
 
-COPY . /app
+COPY src /app/src
 COPY requirements.txt /app/src/requirements.txt
 
 WORKDIR /app/src
