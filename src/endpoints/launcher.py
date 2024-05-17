@@ -49,7 +49,7 @@ def launcher_games():
                 {
                     "id": "dg_bh",
                     "name": "Deathgarden Bloodharvest",
-                    "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/555440/capsule_616x353.jpg?t=1559516524",
+                    "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/730/library_600x900_2x.jpg?t=1696269591",
                     "status": "shown"
                 },
                 {
@@ -139,25 +139,25 @@ def launcher_game_patch(game):
                 {
                     "instructions": {
                         "delete": [
-                            "TheExit\\Binaries\\Win64\\BattlEye\\",
-                            "TheExit\\Binaries\\Win64\\TheExit.exe",
+                            "DEATHGARDEN\\TheExit\\Binaries\\Win64\\BattlEye\\",
+                            "DEATHGARDEN\\TheExit\\Binaries\\Win64\\TheExit_BE.exe",
                         ],
                         "download": [
                             {
                                 "name": "TheExitRebirthBackendAPI-WindowsNoEditor_P.pak",
-                                "location": "TheExit\\Content\\Paks\\",
+                                "location": "DEATHGARDEN\\TheExit\\Content\\Paks\\",
                                 "url": "https://api.zkwolf.com/updater/files/pak/",
                             },
                             {
                                 "name": "TheExitRebirthBackendAPI-WindowsNoEditor_P.sig",
-                                "location": "TheExit\\Content\\Paks\\",
+                                "location": "DEATHGARDEN\\TheExit\\Content\\Paks\\",
                                 "url": "https://api.zkwolf.com/updater/files/sig/",
                             }
                         ],
                         "rename": [
                             {
                                 "name": "TheExit.exe",
-                                "location": "TheExit\\Binaries\\Win64\\",
+                                "location": "DEATHGARDEN\\TheExit\\Binaries\\Win64\\",
                                 "new_name": "TheExit_BE.exe"
                             }
                         ]
