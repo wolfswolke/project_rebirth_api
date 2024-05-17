@@ -8,6 +8,7 @@ from logic.hash_handler import hash_handler
 from logic.webhook_handler import sender
 import json
 import os
+import random
 
 app = Flask(__name__)
 

@@ -4,6 +4,21 @@ from flask_definitions import *
 @app.route('/', methods=["GET"])
 def index():
     check_user_agent("soft")
+    randome_int = random.randint(1, 100000)
+    if randome_int == 6969:
+        # read static/ascii/a2.txt and send as text
+        try:
+            rand_seed = random.randint(1, 69)
+            if rand_seed == 69:
+                return send_from_directory(os.path.join(app.root_path, 'static', 'ascii'), 'a2.txt')
+            elif rand_seed == 1:
+                return send_from_directory(os.path.join(app.root_path, 'static', 'ascii'), 'a1.txt')
+            return send_from_directory(os.path.join(app.root_path, 'static', 'ascii'), 'a3.txt')
+        except TimeoutError:
+            return jsonify({"status": "error"})
+        except Exception as e:
+            logger.graylog_logger(level="error", handler="general-index", message=e)
+            return jsonify({"status": "error"})
     return render_template("index.html")
 
 
