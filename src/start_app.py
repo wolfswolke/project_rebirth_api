@@ -12,6 +12,7 @@ from flask_definitions import *
 import endpoints.general
 import endpoints.logging
 import endpoints.launcher
+import endpoints.web
 
 
 # ------------------------------------------------------- #
@@ -48,4 +49,5 @@ def keep_alive():
 # main
 # ------------------------------------------------------- #
 logger.setup_graylog(use_graylog, graylog_server)
+mongo.setup(mongo_server, mongo_db, mongo_user_collection, mongo_game_collection, mongo_game_info_collection,mongo_patch_collection)
 keep_alive()
