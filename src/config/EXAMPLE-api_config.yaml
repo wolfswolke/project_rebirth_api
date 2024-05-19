@@ -1,3 +1,6 @@
+global:
+    version: 0.0.1
+    name: Project_Rebirth_API
 graylog:
     host: 000.000.000.000
     use: false
@@ -6,3 +9,10 @@ discord:
     use: false
     webhook_urls:
         - https://discord.com/api/webhooks/000000000000000000/
+mongo:
+    host: mongodb://IP:27017/
+    db: db_name
+    user_collection: collection_name
+    game_collection: collection_name
+    game_info_collection: collection_name
+    patch_collection: collection_name
