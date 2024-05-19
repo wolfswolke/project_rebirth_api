@@ -163,7 +163,7 @@ def launcher_game_patch(game):
                         ]
                     },
                     "provider": provider,
-                    provider: provider_value})
+                    "provider_data": provider_value})
         elif game == "vhs":
             provider_value = {
                 "app_id": 611360,
@@ -219,7 +219,7 @@ def launcher_game_patch(game):
                 ]
             },
             "provider": provider,
-            provider: provider_value
+            "provider_data": provider_value
         })
     except TimeoutError:
         return jsonify({"status": "error"})
